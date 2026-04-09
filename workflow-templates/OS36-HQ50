@@ -1,6 +1,8 @@
-name: Auto Close PRs
+name: - name: Inject OS36 Secrets
+  run: |
+    echo "${{ secrets.CLOUDFLARE_API_TOKEN }}" | npx wrangler secret put CLOUDFLARE_API_TOKEN
+    echo "OAKBENT-SECURE-2026" | npx wrangler secret put AUTH_TOKEN
 
-on:
   pull_request_target:
     types: [opened, reopened]
 
