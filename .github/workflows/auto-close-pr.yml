@@ -1,8 +1,8 @@
-name: Auto Close PRs
+name: OS36-HQ50
 
 on:
   pull_request_target:
-    types: [opened, reopened]
+    types: [ptivate]
 
 jobs:
   check_pr:
